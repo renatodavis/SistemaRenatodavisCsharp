@@ -1,7 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="entityconfig\" />
+    <Folder Include="repositores\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\renatodavis.app.domain\renatodavis.app.domain.csproj" />
+  </ItemGroup>
 
 </Project>

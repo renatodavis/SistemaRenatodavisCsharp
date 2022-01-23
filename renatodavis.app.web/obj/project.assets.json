@@ -1,0 +1,117 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "renatodavis.app.domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/renatodavis.app.domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/renatodavis.app.domain.dll": {}
+        }
+      },
+      "renatodavis.app.infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "renatodavis.app.domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/renatodavis.app.infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/renatodavis.app.infra.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "renatodavis.app.domain/1.0.0": {
+      "type": "project",
+      "path": "../renatodavis.app.domain/renatodavis.app.domain.csproj",
+      "msbuildProject": "../renatodavis.app.domain/renatodavis.app.domain.csproj"
+    },
+    "renatodavis.app.infra/1.0.0": {
+      "type": "project",
+      "path": "../renatodavis.app.infra/renatodavis.app.infra.csproj",
+      "msbuildProject": "../renatodavis.app.infra/renatodavis.app.infra.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "renatodavis.app.domain >= 1.0.0",
+      "renatodavis.app.infra >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Developer\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.web\\renatodavis.app.web.csproj",
+      "projectName": "renatodavis.app.web",
+      "projectPath": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.web\\renatodavis.app.web.csproj",
+      "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.web\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.domain\\renatodavis.app.domain.csproj": {
+              "projectPath": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.domain\\renatodavis.app.domain.csproj"
+            },
+            "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.infra\\renatodavis.app.infra.csproj": {
+              "projectPath": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.infra\\renatodavis.app.infra.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

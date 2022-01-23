@@ -1,0 +1,12 @@
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\bin\Debug\netcoreapp3.1\renatodavis.app.infra.deps.json
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\bin\Debug\netcoreapp3.1\renatodavis.app.infra.dll
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\bin\Debug\netcoreapp3.1\renatodavis.app.infra.pdb
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\bin\Debug\netcoreapp3.1\renatodavis.app.domain.dll
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\bin\Debug\netcoreapp3.1\renatodavis.app.domain.pdb
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\obj\Debug\netcoreapp3.1\renatodavis.app.infra.csprojAssemblyReference.cache
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\obj\Debug\netcoreapp3.1\renatodavis.app.infra.csproj.CoreCompileInputs.cache
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\obj\Debug\netcoreapp3.1\renatodavis.app.infra.AssemblyInfoInputs.cache
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\obj\Debug\netcoreapp3.1\renatodavis.app.infra.AssemblyInfo.cs
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\obj\Debug\netcoreapp3.1\renatodavis.app.infra.csproj.CopyComplete
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\obj\Debug\netcoreapp3.1\renatodavis.app.infra.dll
+C:\Users\Developer\source\repos\renatodavis.app\renatodavis.app.infra\obj\Debug\netcoreapp3.1\renatodavis.app.infra.pdb

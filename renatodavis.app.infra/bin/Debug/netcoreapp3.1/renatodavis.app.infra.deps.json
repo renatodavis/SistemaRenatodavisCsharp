@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "renatodavis.app.infra/1.0.0": {
+        "dependencies": {
+          "renatodavis.app.domain": "1.0.0"
+        },
+        "runtime": {
+          "renatodavis.app.infra.dll": {}
+        }
+      },
+      "renatodavis.app.domain/1.0.0": {
+        "runtime": {
+          "renatodavis.app.domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "renatodavis.app.infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "renatodavis.app.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
