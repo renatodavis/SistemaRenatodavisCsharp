@@ -9,6 +9,7 @@ namespace renatodavis.app.domain.entities
     {
         public int FornecedorId { get; set; }
         public string Descricao { get; set; }
+        
 
     }
 }
