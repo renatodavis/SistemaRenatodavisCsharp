@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9oZpsDoQJgOwLmY6vsPr6vH8JM3Xb/0SrRxZWx9cyNaoPQ4k9m5Rwk5FqT5LYvhXn90+PSmBQiQJBEFSBWrSRQ==",
+  "dgSpecHash": "C18elVlynv/92Uva20Uc102Mk0TVJa1M3EEeh7oVeBIqao8rCqJJ/y5oSt5WXgJEY1Gnt2WkqqLYtjFzBJ/TbA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Developer\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\Developer\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\Developer\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
