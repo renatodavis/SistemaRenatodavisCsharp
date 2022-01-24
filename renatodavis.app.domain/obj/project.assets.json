@@ -8,23 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Developer\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\simone\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
+      "projectUniqueName": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
       "projectName": "renatodavis.app.domain",
-      "projectPath": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
-      "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Developer\\source\\repos\\renatodavis.app\\renatodavis.app.domain\\obj\\",
+      "projectPath": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
+      "packagesPath": "C:\\Users\\simone\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\simone\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -36,6 +32,7 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
           "projectReferences": {}
         }
       },
@@ -47,6 +44,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
+        "targetAlias": "netcoreapp3.0",
         "imports": [
           "net461",
           "net462",
@@ -76,7 +74,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

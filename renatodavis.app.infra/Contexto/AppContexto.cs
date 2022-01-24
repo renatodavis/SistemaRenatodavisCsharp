@@ -10,7 +10,7 @@ namespace renatodavis.app.infra.Contexto
     {
         public AppContexto(DbContextOptions<AppContexto> options  ):base(options)
         {
-
+            
         }
         
         // Mapeamento das entidades
