@@ -24,14 +24,24 @@ namespace renatodavis.app.web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
             services.AddDbContext<AppContexto>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Conexao")));
-            services.AddControllersWithViews();
+            
+
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var contexto = serviceScope.ServiceProvider.GetRequiredService<AppContexto>();
+                contexto.Database.EnsureCreated();
+                DbInicializer.Inicialize(contexto);
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

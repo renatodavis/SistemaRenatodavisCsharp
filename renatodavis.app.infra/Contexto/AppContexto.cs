@@ -18,9 +18,9 @@ namespace renatodavis.app.infra.Contexto
         // configurações do EF 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Cliente>().ToTable("Cliente");
-            modelBuilder.Entity<Cliente>().ToTable("Produto");
-            modelBuilder.Entity<Cliente>().ToTable("Fornecedor");
+            modelBuilder.Entity<Cliente>().ToTable("Clientes");
+            modelBuilder.Entity<Produto>().ToTable("Produtos");
+            modelBuilder.Entity<Fornecedor>().ToTable("Fornecedores");
 
         }
     }
