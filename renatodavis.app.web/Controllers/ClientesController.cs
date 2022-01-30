@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using renatodavis.app.domain.entities;
-using renatodavis.app.infra.Contexto;
+using renatodavis.app.domain.interfaces;
 
 namespace renatodavis.app.web.Controllers
 {
     public class ClientesController : Controller
     {
-        private readonly AppContexto _context;
+        private readonly IClienteRepository _context;
 
-        public ClientesController(AppContexto context)
+        public ClientesController(IClienteRepository context)
         {
             _context = context;
         }
@@ -22,19 +21,16 @@ namespace renatodavis.app.web.Controllers
         // GET: Clientes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Clientes.ToListAsync());
+            return View(await _context.GetAll());
         }
 
         // GET: Clientes/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
+            
+            
+            var cliente = await _context.GetById(id);
+                
             if (cliente == null)
             {
                 return NotFound();
@@ -58,22 +54,21 @@ namespace renatodavis.app.web.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(cliente);
-                await _context.SaveChangesAsync();
+                await _context.Add(cliente);                 
                 return RedirectToAction(nameof(Index));
             }
             return View(cliente);
         }
 
         // GET: Clientes/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes.FindAsync(id);
+            var cliente = await _context.GetById(id);
             if (cliente == null)
             {
                 return NotFound();
@@ -97,8 +92,8 @@ namespace renatodavis.app.web.Controllers
             {
                 try
                 {
-                    _context.Update(cliente);
-                    await _context.SaveChangesAsync();
+                    await _context.Update(cliente);
+                    
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -117,15 +112,11 @@ namespace renatodavis.app.web.Controllers
         }
 
         // GET: Clientes/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
+            var cliente = await _context.GetById(id);
+                
             if (cliente == null)
             {
                 return NotFound();
@@ -139,15 +130,14 @@ namespace renatodavis.app.web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var cliente = await _context.Clientes.FindAsync(id);
-            _context.Clientes.Remove(cliente);
-            await _context.SaveChangesAsync();
+            var cliente = await _context.GetById(id);
+            await _context.Remove(cliente);            
             return RedirectToAction(nameof(Index));
         }
 
         private bool ClienteExists(int id)
         {
-            return _context.Clientes.Any(e => e.ClienteId == id);
+            return _context.bExisteCliente(id);            
         }
     }
 }
