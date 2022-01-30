@@ -67,7 +67,7 @@ namespace renatodavis.app.web.Controllers
             {
                 return NotFound();
             }
-
+            //_context.bExisteCliente(id)
             var cliente = await _context.GetById(id);
             if (cliente == null)
             {

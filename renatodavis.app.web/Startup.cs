@@ -4,11 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using renatodavis.app.domain.interfaces;
 using renatodavis.app.infra.Contexto;
+using renatodavis.app.infra.repositores;
 
 namespace renatodavis.app.web
 {
@@ -25,8 +28,11 @@ namespace renatodavis.app.web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<IClienteRepository, ClienteRepository>();
+
+            var connectionString = Configuration.GetConnectionString("Conexao");
             services.AddDbContext<AppContexto>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Conexao")));
+                options.UseSqlServer(connectionString));
             
 
           
@@ -35,11 +41,13 @@ namespace renatodavis.app.web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
             using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
             {
                 var contexto = serviceScope.ServiceProvider.GetRequiredService<AppContexto>();
-                contexto.Database.EnsureCreated();
-                DbInicializer.Inicialize(contexto);
+
+                //contexto.Database.EnsureCreated();
+                //DbInicializer.Inicialize(contexto);
             }
 
             if (env.IsDevelopment())
@@ -61,6 +69,10 @@ namespace renatodavis.app.web
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "Clientes",
+                    pattern: "{controller=Clientes}/{action=Index}/{id?}");
             });
         }
     }
