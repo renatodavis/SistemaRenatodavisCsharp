@@ -30,8 +30,9 @@ namespace renatodavis.app.infra.Contexto
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Fornecedor> Fornecedores { get; set; }
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<GrupoProduto> GrupoProdutos { get; set; }
 
-        
+
         // configurações do EF 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,6 +41,7 @@ namespace renatodavis.app.infra.Contexto
 
             modelBuilder.Entity<Cliente>().ToTable("Clientes");
             modelBuilder.Entity<Produto>().ToTable("Produtos");
+            modelBuilder.Entity<GrupoProduto>().ToTable("GrupoProdutos");
             modelBuilder.Entity<Fornecedor>().ToTable("Fornecedores");
 
         }

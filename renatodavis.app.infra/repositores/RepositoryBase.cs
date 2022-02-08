@@ -29,6 +29,7 @@ namespace renatodavis.app.infra.repositores
             return await Db.Set<TEntity>().ToListAsync();
 
         }
+        
 
         public async Task Update(TEntity obj)
         {

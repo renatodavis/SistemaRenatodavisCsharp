@@ -13,5 +13,19 @@ namespace renatodavis.app.infra.repositores
         {
             return Db.Set<Produto>().Any(e => e.ProdutoId == id);
         }
+        public Cliente Cliente(int id)
+        {
+            return Db.Set<Cliente>().FirstOrDefault(e => e.ClienteId == id);
+        }
+
+        public IList<Cliente> Clientes()
+        {
+            return Db.Set<Cliente>().ToList();
+        }
+
+        public IList<GrupoProduto> GrupoProdutos()
+        {
+            return Db.Set<GrupoProduto>().ToList();
+        }
     }
 }

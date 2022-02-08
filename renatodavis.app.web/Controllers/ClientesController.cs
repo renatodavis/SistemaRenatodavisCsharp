@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using X.PagedList;
+
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,9 +21,11 @@ namespace renatodavis.app.web.Controllers
         }
 
         // GET: Clientes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pagina)
         {
-            return View(await _context.GetAll());
+            const int itensPorPagina = 4;
+            int numeroPagina = (pagina ?? 1);
+            return View(await _context.GetAll().Result.ToPagedListAsync(numeroPagina, itensPorPagina));
         }
 
         // GET: Clientes/Details/5

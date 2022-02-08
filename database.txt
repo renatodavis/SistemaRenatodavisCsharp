@@ -1,0 +1,49 @@
+CREATE proc [dbo].[GetClienteCount_Search]  
+ @Search varchar(20) = null
+as  
+begin  
+SELECT count(ClienteId) FROM Clientes
+where Nome like '%'+ Case when @Search is null then Nome else @Search end+'%' 
+end
+GO
+
+CREATE proc [dbo].[ClientePagination_Search]    
+ @OrderBy varchar(20) = null,
+ @Search varchar(20) = null,
+ @PageNumber int,    
+ @PageSize int    
+as    
+begin    
+  
+DECLARE @sqlCommand nvarchar(1000) 
+
+if (@Search is null)
+begin
+
+SET @sqlCommand =   
+'SELECT ClienteId,    
+Nome    
+
+FROM Clientes ORDER BY '+ @OrderBy  +  
+' OFFSET '+ CONVERT(varchar(10),@PageSize)  +'*'
++ '('+ CONVERT(varchar(10),@PageNumber) +'-' +'1) ROWS FETCH NEXT '
++ CONVERT(varchar(10),@PageSize) +' ROWS ONLY OPTION (RECOMPILE); ';   
+print @sqlCommand
+EXEC sp_executesql @sqlCommand;  
+end
+else
+begin
+
+SET @sqlCommand =   
+'SELECT ClienteId,    
+Nome
+
+FROM Clientes where Nome like ''%'+ @Search +'%'' ORDER BY '+ @OrderBy  +  
+' OFFSET '+ CONVERT(varchar(10),@PageSize)  +'*'
++ '('+ CONVERT(varchar(10),@PageNumber) +'-' +'1) ROWS FETCH NEXT '
++ CONVERT(varchar(10),@PageSize) +' ROWS ONLY OPTION (RECOMPILE); ';   
+print @sqlCommand
+EXEC sp_executesql @sqlCommand;  
+end
+end 
+GO

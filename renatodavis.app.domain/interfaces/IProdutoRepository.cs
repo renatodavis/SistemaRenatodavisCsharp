@@ -9,5 +9,10 @@ namespace renatodavis.app.domain.interfaces
     {
 
         public bool bExisteProduto(int id);
+
+        public IList<Cliente> Clientes();
+
+        public IList<GrupoProduto> GrupoProdutos();
+
     }
 }

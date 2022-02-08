@@ -1,36 +1,115 @@
-﻿@model IEnumerable<renatodavis.app.domain.entities.Cliente>
+﻿
+@model X.PagedList.StaticPagedList<renatodavis.app.domain.entities.Cliente>
 
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using X.PagedList.Mvc.Core; @*import this so we get our HTML Helper*@
+
+@using X.PagedList.Mvc.Core.Fluent
+@using X.PagedList.Web.Common
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Clientes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+
+    .arrow {
+        display: inline-block;
+        height: 16px;
+        vertical-align: middle;
+        width: 16px;
+    }
+
+        .arrow.up {
+            background-image: url('/images/arrow-up.png');
+        }
+
+        .arrow.down {
+            background-image: url('/images/arrow-down.png');
+        }
+</style>
+
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Novo cadastro</a>
 </p>
+<!--
+
+
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                /*Html.DisplayNameFor(model => model.)*/
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ClienteId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ClienteId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ClienteId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+*/
+
+-->
+<h4>Clientes</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                ClienteId
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
+                @cliente.ClienteId
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ClienteId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ClienteId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ClienteId">Delete</a>
+                @cliente.Nome
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@cliente.ClienteId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@cliente.ClienteId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@cliente.ClienteId">Delete</a>
+            </td>
+
+        </tr>
+        }
+        <tr>
+            <td colspan="3">
+                @Html.PagedListPager((IPagedList)Model,
+                     pagina => Url.Action("Index", new { pagina }))
+
             </td>
         </tr>
-}
     </tbody>
 </table>

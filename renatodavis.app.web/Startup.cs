@@ -29,6 +29,10 @@ namespace renatodavis.app.web
         {
             services.AddControllersWithViews();
             services.AddTransient<IClienteRepository, ClienteRepository>();
+            services.AddTransient<IFornecedorRepository, FornecedorRepository>();
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+            services.AddTransient<IGrupoProdutoRepository, GrupoProdutoRepository>();
+
 
             var connectionString = Configuration.GetConnectionString("Conexao");
             services.AddDbContext<AppContexto>(options =>
@@ -46,8 +50,8 @@ namespace renatodavis.app.web
             {
                 var contexto = serviceScope.ServiceProvider.GetRequiredService<AppContexto>();
 
-                //contexto.Database.EnsureCreated();
-                //DbInicializer.Inicialize(contexto);
+                contexto.Database.EnsureCreated();
+                DbInicializer.Inicialize(contexto);
             }
 
             if (env.IsDevelopment())
