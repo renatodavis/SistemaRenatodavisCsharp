@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\renatodavis.app.infra.csproj": {}
+    "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\renatodavis.app.infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj": {
+    "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
+        "projectUniqueName": "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
         "projectName": "renatodavis.app.domain",
-        "projectPath": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
-        "packagesPath": "C:\\Users\\simone\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\obj\\",
+        "projectPath": "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj",
+        "packagesPath": "C:\\Users\\Renato.Servidor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\simone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Renato.Servidor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +29,6 @@
         },
         "frameworks": {
           "netcoreapp3.0": {
-            "targetAlias": "netcoreapp3.0",
             "projectReferences": {}
           }
         },
@@ -38,7 +40,6 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "targetAlias": "netcoreapp3.0",
           "imports": [
             "net461",
             "net462",
@@ -68,36 +69,38 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\renatodavis.app.infra.csproj": {
+    "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\renatodavis.app.infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\renatodavis.app.infra.csproj",
+        "projectUniqueName": "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\renatodavis.app.infra.csproj",
         "projectName": "renatodavis.app.infra",
-        "projectPath": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\renatodavis.app.infra.csproj",
-        "packagesPath": "C:\\Users\\simone\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\obj\\",
+        "projectPath": "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\renatodavis.app.infra.csproj",
+        "packagesPath": "C:\\Users\\Renato.Servidor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.infra\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\simone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Renato.Servidor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
-            "targetAlias": "netcoreapp3.0",
+          "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj": {
-                "projectPath": "C:\\Users\\simone\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj"
+              "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj": {
+                "projectPath": "C:\\Users\\Renato.Servidor\\Source\\Repos\\SistemaRenatodavisCsharp\\renatodavis.app.domain\\renatodavis.app.domain.csproj"
               }
             }
           }
@@ -109,8 +112,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
-          "targetAlias": "netcoreapp3.0",
+        "netcoreapp3.1": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -135,6 +137,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.13, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -147,26 +153,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.0.1, 3.0.1]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.0.0, 3.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.0.0, 3.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
