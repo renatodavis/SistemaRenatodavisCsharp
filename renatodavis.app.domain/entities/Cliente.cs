@@ -16,6 +16,8 @@ namespace renatodavis.app.domain.entities
         [Key]
         public int ClienteId { get; set; }
         public string Nome { get; set; }
+        public string email { get; set; }
+        public string telefone { get; set; }
 
     }
 }

@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "renatodavis.app.domain", "renatodavis.app.domain\renatodavis.app.domain.csproj", "{3011DF86-76FC-42A3-A95D-E2B88AB558A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infra", "infra", "{9337F87F-4E22-4274-9AA0-18B28EFB6CBC}"
+	ProjectSection(SolutionItems) = preProject
+		renatodavis.app.api\appsettings.json = renatodavis.app.api\appsettings.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "renatodavis.app.infra", "renatodavis.app.infra\renatodavis.app.infra.csproj", "{6B91DEE9-16AC-4F15-9C46-0A2D3B12E72C}"
 EndProject
@@ -15,7 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aplication", "aplication", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "renatodavis.app.web", "renatodavis.app.web\renatodavis.app.web.csproj", "{F0F660B1-37D3-4CE5-A84C-152031869332}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "renatodavis.app.api", "renatodavis.app.api\renatodavis.app.api.csproj", "{EFA6C33F-0DB2-4B6F-9302-DFF8B169A527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "renatodavis.app.api", "renatodavis.app.api\renatodavis.app.api.csproj", "{EFA6C33F-0DB2-4B6F-9302-DFF8B169A527}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "renatodavis.app.frontend", "renatodavis.app.frontend\renatodavis.app.frontend.esproj", "{B12DE485-3564-4083-BC45-A34F43B96C56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +44,12 @@ Global
 		{EFA6C33F-0DB2-4B6F-9302-DFF8B169A527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFA6C33F-0DB2-4B6F-9302-DFF8B169A527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFA6C33F-0DB2-4B6F-9302-DFF8B169A527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12DE485-3564-4083-BC45-A34F43B96C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12DE485-3564-4083-BC45-A34F43B96C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12DE485-3564-4083-BC45-A34F43B96C56}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B12DE485-3564-4083-BC45-A34F43B96C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12DE485-3564-4083-BC45-A34F43B96C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12DE485-3564-4083-BC45-A34F43B96C56}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +59,7 @@ Global
 		{6B91DEE9-16AC-4F15-9C46-0A2D3B12E72C} = {9337F87F-4E22-4274-9AA0-18B28EFB6CBC}
 		{F0F660B1-37D3-4CE5-A84C-152031869332} = {96695B93-C527-4755-A329-F442D0CDF812}
 		{EFA6C33F-0DB2-4B6F-9302-DFF8B169A527} = {96695B93-C527-4755-A329-F442D0CDF812}
+		{B12DE485-3564-4083-BC45-A34F43B96C56} = {96695B93-C527-4755-A329-F442D0CDF812}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3F6AC59-4CD1-4AAF-8A3E-08D740F2EE8C}

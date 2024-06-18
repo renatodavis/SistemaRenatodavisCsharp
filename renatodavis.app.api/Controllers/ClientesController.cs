@@ -1,24 +1,61 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using renatodavis.app.api.Services;
 using renatodavis.app.domain.entities;
-using renatodavis.app.domain.interfaces;
 
 namespace renatodavis.app.api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClientesController : Controller
+    public class ClientesController : ControllerBase
     {
-        private readonly IClienteRepository _clienteRepository;
+        private readonly IClienteService _clienteService;
         
-        public ClientesController(IClienteRepository clienteRepository)
+        public ClientesController(IClienteService clienteService)
         {
-            _clienteRepository = clienteRepository;
+            _clienteService = clienteService;
         }
+
         [HttpGet]
-        public async Task<List<Cliente>> GetClientesAsync()
+        [Route("api/getAll")]
+        public async Task<ActionResult<List<Cliente>>> GetClientesAsync()
         {
-            return await _clienteRepository.GetClientesAsync();
+            var clientes = await _clienteService.GetClientesAsync();
+            return Ok(clientes);
+        }
+
+        [HttpPost]
+        [Route("api/addCliente")]
+        public async Task<ActionResult<List<Cliente>>> AddCliente(Cliente cliente)
+        {
+            try
+            {
+                await _clienteService.CriarClienteAsync(cliente);
+                return Ok(cliente);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { messageError = ex.Message });
+            }
+            
         }
         
+        [HttpPatch]
+        [Route("api/update/{id}")]
+        public async Task<ActionResult<List<Cliente>>> UpdateCliente(Cliente cliente)
+        {
+            await _clienteService.AtualizarClienteAsync(cliente.ClienteId, cliente);
+            return Ok(cliente);
+        }
+
+        [HttpDelete]
+        [Route("api/delete/{id}")]
+        public ActionResult RemoverCliente(Cliente cliente)
+        {
+            var clienteExcluido = cliente;
+            _clienteService.RemoverCliente(cliente.ClienteId);
+            return Ok(clienteExcluido);
+        }
+
+
     }
 }
