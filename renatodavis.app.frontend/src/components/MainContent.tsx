@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MainContent: React.FC = ({ children }) => {
+const MainContent: React.FC = () => {
   return (
     <main className="flex-1 p-4">
-      {children}
+      
     </main>
   );
 };
